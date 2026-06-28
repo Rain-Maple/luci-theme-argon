@@ -55,7 +55,7 @@
   --shadow-sm: 0 2px 3px -2px rgba(0, 0, 0, 0.6);
   --shadow-md: 0 3px 9px -3px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 0 35px -5px rgba(0, 0, 0, 0.75);
-  --shadow-inset: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 1px 9px rgba(0, 0, 0, 0.6);
+  --shadow-inset: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 1px 9px rgba(190, 190, 190, 0.6);
 
   /* 间距 */
   --spacing-xs: 0.25rem;
@@ -700,7 +700,7 @@ div[style*="width:100%;height:300px;border:1px solid #000;background:#fff"] {
 
 .tr {
   display: table-row;
-  background-color: #fefefe
+  background-color: #fcfcfc
 }
 
 .thead {
@@ -772,7 +772,7 @@ div[style*="width:100%;height:300px;border:1px solid #000;background:#fff"] {
 .tr.table-titles>.th,
 .tr.cbi-section-table-titles>.th {
   border-top: 0 !important;
-  background-color: #f6f9fc;
+  background-color: #e2effc;
   padding: 1.1em 1.25rem;
   line-height: 1.3rem;
 }
@@ -1065,6 +1065,7 @@ select[multiple] {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  text-shadow: 0px 0px 2px rgba(60, 60, 60, 0.2);
 }
 
 .main-left {
@@ -1381,7 +1382,7 @@ select[multiple] {
 }
 
 .main-left::-webkit-scrollbar-thumb {
-  background-color: #f6f9fc;
+  background-color: #e2effc;
 }
 
 .main-left::-webkit-scrollbar-track {
@@ -1888,15 +1889,6 @@ body:not([data-page="admin-status-overview"]) #cbi-wireless>#wifi_assoclist_tabl
 }
 
 #cbi-wireless .td,
-#cbi-network,
-.table[width="100%"]>.tr:first-child>.td,
-[data-page="admin-network-diagnostics"] .tr>.td,
-.tr.table-titles>.th,
-.tr.cbi-section-table-titles>.th {
-  border-bottom: 1px solid var(--border-color) !important;
-}
-
-#cbi-wireless .td,
 .table[width="100%"]>.tr:first-child>.td,
 [data-page="admin-network-diagnostics"] .tr>.td {
   border-top: 0 !important;
@@ -1909,7 +1901,7 @@ body:not([data-page="admin-status-overview"]) #cbi-wireless>#wifi_assoclist_tabl
 .cbi-section-table-row {
   margin-bottom: 1rem;
   text-align: center !important;
-  background: #fefefe;
+  background: #fcfcfc;
 }
 
 .cbi-section-table-row:last-child {
@@ -1978,7 +1970,7 @@ body:not([data-page="admin-status-overview"]) #cbi-wireless>#wifi_assoclist_tabl
 
 div>table>tbody>tr:nth-of-type(2n),
 div>.table>.tr:nth-of-type(2n) {
-  background-color: #fefefe;
+  background-color: #fcfcfc;
 }
 
 /* 嵌套表格修复 */
@@ -2203,7 +2195,7 @@ td>table>tbody>tr>td,
 
 .tabs::-webkit-scrollbar-thumb,
 .cbi-tabmenu::-webkit-scrollbar-thumb {
-  background-color: #f6f9fc;
+  background-color: #e2effc;
 }
 
 .tabs::-webkit-scrollbar-track,
@@ -2473,15 +2465,15 @@ td>table>tbody>tr>td,
   vertical-align: middle;
   white-space: normal;
   word-wrap: break-word;
-  background-color: #f6f9fc;
+  background-color: #e2effc;
 }
 
 .cbi-rowstyle-1 {
-  background-color: #fefefe;
+  background-color: #fcfcfc;
 }
 
 .cbi-rowstyle-2 {
-  background-color: #fefefe;
+  background-color: #fcfcfc;
 }
 
 .cbi-rowstyle-2 .cbi-button-up,
@@ -3393,7 +3385,7 @@ td>.ifacebadge,
   flex-direction: column;
   border-radius: var(--border-radius-md);
   min-width: 100px;
-  background-color: #fefefe;
+  background-color: #fcfcfc;
   border: 1px solid var(--border-color);
 }
 
@@ -3818,7 +3810,8 @@ pre.command-output {
 
 [data-page="admin-system-admin-sshkeys"] .cbi-dynlist {
   padding: 0.8rem;
-  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
 }
 
 [data-page="admin-system-admin-sshkeys"] .cbi-dynlist>.add-item>.cbi-input-text {
@@ -5117,7 +5110,6 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
     min-height: 32px;
     margin: 5em auto;
     padding: 1em;
-    border-radius: 3px !important;
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
   }

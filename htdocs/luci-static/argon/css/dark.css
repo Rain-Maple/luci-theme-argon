@@ -234,7 +234,7 @@ header::after {
 [data-page^="admin-system-admin"]:not(.node-main-login) .cbi-map:not(#cbi-dropbear),
 [data-page="admin-system-opkg"] #maincontent>.container {
   background: var(--dark-table) !important;
-  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.35);
+  box-shadow: none;
 }
 
 .panel-title,
@@ -306,6 +306,8 @@ td.cbi-value-field var {
 .cbi-section-remove:nth-of-type(2n),
 .cbi-section-node:nth-of-type(2n) {
   background-color: var(--dark-table);
+  border: 1px solid var(--dark-border);
+  border-radius: 2rem;
 }
 
 .cbi-section[id] .cbi-section-remove:nth-of-type(4n+3),
@@ -584,8 +586,9 @@ input,
    ============================================================ */
 [data-page="admin-system-admin-sshkeys"] .cbi-dynlist {
   padding: 0.8rem;
+  border: none;
   background-color: var(--dark-table);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
 }
 
 .cbi-dynlist>.item>span {
@@ -898,13 +901,12 @@ td>.ifacebadge,
 
 /* Network */
 #cbi-wireless .td,
-#cbi-network,
+/* #cbi-network, */
 .table[width="100%"]>.tr:first-child>.td,
 [data-page="admin-network-diagnostics"] .tr>.td,
 .tr.table-titles>.th,
 .tr.cbi-section-table-titles>.th {
   background-color: var(--dark-surface);
-  border-bottom: black 1px solid !important;
 }
 
 [data-page="admin-network-diagnostics"] .cbi-section {
